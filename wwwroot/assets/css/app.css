@@ -1,0 +1,61 @@
+﻿p,
+h1,
+h2,
+h3 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border-top: 1px dashed #007bff;
+}
+
+body {
+    background-color: gray;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+
+/* * *     root     * * */
+#malformedpeach-github-io {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+#app-loading p {
+    color: black;
+    margin-top: 10rem;
+}
+
+header {
+    display: flex;
+    background-color: black;
+    padding: 1rem;
+    z-index: 99;
+    width: 100%;
+    align-items: center;
+}
+
+header span {
+    font-size: 1.5rem;
+    color: white;
+}
+
+#main {
+    background: #323232;
+    padding-top: 6rem;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes example {
+    0%   { bottom: -100% }
+    100% { bottom: 0% }
+}

@@ -1,18 +1,14 @@
 ﻿@inherits LayoutComponentBase
+@using malformedpeach.github.io.Shared.Components;
 
-<header>
-    <a href="/" class="home">
-        <i class="icon fas fa-home"></i>
-        malformedpeach.github.io
-    </a>
-    
-    <span> > </span>
+<div id="main">
 
-    <NavLink href="/about" class="text-uppercase">about</NavLink>
-</header>
+    <Header />
 
-<div id="main" class="container">
+    <div id="main-content" class="container">
+        @Body
+    </div>
 
-    @Body
+    <Footer />
     
 </div>

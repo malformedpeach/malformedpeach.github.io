@@ -8,19 +8,13 @@ h3 {
 a {
     text-decoration: none;
     color: white;
+    transition: ease-in .2s text-shadow;
 }
 
 a:hover {
     color: white;
     text-decoration: none;
-    animation-name: link-hover;
-    animation-duration: 1s;
-}
-
-@keyframes link-hover {
-    0%   { text-shadow: 0px 0px 0px #ffffff; }
-    75%  { text-shadow: 8px 8px 8px #007bff; }
-    100% { text-shadow: 0px 0px 0px #ffffff; }
+    text-shadow: 2px 2px 0px #007bff;
 }
 
 hr {
@@ -28,7 +22,7 @@ hr {
 }
 
 body {
-    background-color: #1c1c1c;
+    background-color: #696969;
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -37,7 +31,8 @@ body {
 
 
 #app-loading p {
-    color: black;
+    color: #ffffff;
+    font-size: 5rem;
     margin-top: 10rem;
 }
 
@@ -49,17 +44,26 @@ body {
 
 
 
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
+#main-content {
+    background: #323232;
+    padding-top: 1rem;
+}
 
 header {
     display: flex;
-    background-color: #000000cc;
+    background-color: #000000;
     padding: 1rem;
     z-index: 99;
     height: 75px;
     width: 100%;
     align-items: center;
-    border-bottom: 1px solid #007bff;
 }
 
 header span {
@@ -74,19 +78,17 @@ header span {
 }
 
 .icon {
-    margin-right: 1rem;
+    margin-right: .5rem;
     font-size: 2rem;
 }
 
-#main {
-    background: #323232;
-    padding-top: 6rem;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
 
 @keyframes example {
     0%   { bottom: -100% }
     100% { bottom: 0% }
+}
+
+footer {
+    background-color: black;
+    width: 100%;
 }

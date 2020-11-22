@@ -1,0 +1,116 @@
+﻿@use 'components/todoapp.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, app, #main, #main-content {
+    height: 100%;
+}
+
+body {
+    background-color: #696969;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+p, h1, h2, h3 {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: ease-in .2s text-shadow;
+
+    :hover {
+        color: white;
+        text-decoration: none;
+        text-shadow: 2px 2px 0px #007bff;
+    }
+}
+
+hr {
+    border-top: 1px dashed #007bff;
+}
+
+
+
+
+#app-loading p {
+    color: #ffffff;
+    font-size: 5rem;
+    margin-top: 10rem;
+}
+
+#malformedpeach-github-io {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+#main-content {
+    background: #323232;
+    padding-top: 1rem;
+}
+
+header {
+    display: flex;
+    background-color: #000000;
+    padding: 1rem;
+    z-index: 99;
+    height: 75px;
+    width: 100%;
+    align-items: center;
+
+    span {
+        font-size: 1.5rem;
+        color: white;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.home {
+    font-size: 2rem;
+}
+
+.icon {
+    margin-right: .5rem;
+    font-size: 2rem;
+}
+
+
+@keyframes example {
+    0% {
+        bottom: -100%
+    }
+
+    100% {
+        bottom: 0%
+    }
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+}

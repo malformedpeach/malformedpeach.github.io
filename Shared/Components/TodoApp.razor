@@ -1,0 +1,29 @@
+﻿@inherits ComponentBase
+
+<h3>TodoApp</h3>
+
+<hr/>
+
+<div class="content-area">
+
+    <div id="todo-container">
+
+        <h2> Shit todo in life</h2>
+
+        <div id="add-todo-container">
+            <input  @bind="InputText" type="text" id="new-todo" placeholder="Todo" >
+            <button @onclick="AddTodo" class="add-btn">Add</button>
+        </div>
+
+
+        <ul>
+            @foreach (var item in TodoItems)
+            {
+                <li>
+                    <input type="checkbox" /> @item
+                </li>
+            }
+        </ul>
+
+    </div>
+</div>

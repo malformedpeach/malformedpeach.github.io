@@ -1,5 +1,6 @@
 ﻿@page "/"
 @layout MainLayout
+@using malformedpeach.github.io.Shared.Components;
 
 <h3>Index</h3>
 
@@ -19,7 +20,7 @@
 </p>
 
 <hr />
-
+ 
 
 <div id="button-container">
     <button class="btn btn-primary">Primary</button>
@@ -27,9 +28,10 @@
     <button class="btn btn-dark">Dark</button>
 </div>
 
+<TodoApp />
 
 <!-- Todo container -->
-<div class="content-area">
+@*<div class="content-area">
 
     <div id="todo-container">
 
@@ -52,4 +54,4 @@
             </li>
         </ul>
     </div>
-</div>
+</div>*@

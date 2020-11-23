@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body, app, #main, #main-content {
-    height: 100%;
+html, body, app, #main #main-content {
+    height: 100vh;
 }
 
 body {
@@ -22,7 +22,7 @@ a {
     text-decoration: none;
     transition: ease-in .2s text-shadow;
 
-    :hover {
+    &:hover {
         color: white;
         text-decoration: none;
         text-shadow: 2px 2px 0px #007bff;

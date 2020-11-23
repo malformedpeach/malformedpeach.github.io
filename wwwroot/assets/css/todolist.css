@@ -41,7 +41,7 @@
     text-decoration: line-through;
 }
 
-ul li {
+/*ul li {
     display: flex;
     cursor: pointer;
     position: relative;
@@ -51,7 +51,7 @@ ul li {
     transition: 0.2s;
     border-radius: 4px 4px;
     border: 1px solid #C0C0C0;
-}
+}*/
 
 .add-btn {
     padding: 1px;

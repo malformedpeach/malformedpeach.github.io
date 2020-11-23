@@ -1,1 +1,39 @@
 ﻿
+#todo-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 0 0;
+
+    #add-todo {
+        display: flex;
+        width: 50%;
+
+        input[type="text"] {
+            width: 85%;
+            padding: .5rem 0 .5rem 1rem;
+            border: none;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        button {
+            width: 15%;
+            border-left: 0;
+            border: 1px solid #007bff;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            border-left: none;
+        }
+    }
+
+    #todo-list {
+        width: 50%;
+        list-style: none;
+        padding: 0;
+        background: #696969;
+
+        .todo {
+        }
+    }
+}

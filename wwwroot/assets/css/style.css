@@ -1,135 +1,102 @@
-#todo-app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem 0 0 0;
-}
-#todo-app #add-todo {
-  display: flex;
-  width: 50%;
-}
-#todo-app #add-todo input[type=text] {
-  width: 85%;
-  padding: 0.5rem 0 0.5rem 1rem;
-  border: none;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-}
-#todo-app #add-todo button {
-  width: 15%;
-  border-left: 0;
-  border: 1px solid #007bff;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-left: none;
-}
-#todo-app #todo-list {
-  width: 50%;
-  list-style: none;
-  padding: 0;
-  background: #696969;
-}
 * {
   box-sizing: border-box;
 }
 
-html, body, app, #main #main-content {
-  height: 100vh;
-}
-
 body {
-  background-color: #696969;
-  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-family: system-ui, sans-serif;
 }
 
-p, h1, h2, h3 {
-  color: white;
+h1, p {
+  margin: 0;
+  line-height: 1.5;
 }
 
 a {
-  color: white;
   text-decoration: none;
-  transition: ease-in 0.2s text-shadow;
-}
-a:hover {
-  color: white;
-  text-decoration: none;
-  text-shadow: 2px 2px 0px #007bff;
-}
-
-hr {
-  border-top: 1px dashed #007bff;
-}
-
-#app-loading p {
-  color: #ffffff;
-  font-size: 5rem;
-  margin-top: 10rem;
-}
-
-#malformedpeach-github-io {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  animation: fadeIn 1s;
+  min-height: 100vh;
+  min-width: 100%;
+  position: absolute;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+#main-content {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1rem;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 426px) {
+  #main-content {
+    max-width: 100%;
   }
 }
-#main-content {
-  background: #323232;
-  padding-top: 1rem;
+@media screen and (min-width: 769px) {
+  #main-content {
+    max-width: 769px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #main-content {
+    max-width: 1025px;
+  }
+}
+
+#main {
+  transition: all 0.2s linear;
+  background: var(--background1);
+  color: var(--text-color);
+}
+#main header {
+  background: var(--background2);
+}
+#main a {
+  color: var(--link-color);
+}
+#main.light {
+  --background1: #d5d5d5;
+  --text-color: #000000;
+  --link-color: red;
+}
+#main.dark {
+  --background1: #16161A;
+  --background2: #111116;
+  --text-color: #DDDDE0;
+  --link-color: #9a9a9a;
 }
 
 header {
   display: flex;
-  background-color: #000000;
-  padding: 1rem;
-  z-index: 99;
-  height: 75px;
-  width: 100%;
   align-items: center;
+  height: 70px;
+  border-bottom: 1px solid;
 }
-header span {
-  font-size: 1.5rem;
-  color: white;
-  margin-left: 1rem;
-  margin-right: 1rem;
+header h1 {
+  position: absolute;
 }
-
-.home {
-  font-size: 2rem;
+header nav {
+  justify-self: center;
+  margin: auto;
 }
-
-.icon {
-  margin-right: 0.5rem;
-  font-size: 2rem;
+header nav a {
+  font-size: 20px;
+  padding: 24px;
 }
 
-@keyframes example {
-  0% {
-    bottom: -100%;
-  }
-  100% {
-    bottom: 0%;
-  }
-}
 footer {
-  background-color: black;
-  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+}
+footer .contact-info {
+  text-align: center;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

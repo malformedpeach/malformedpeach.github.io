@@ -1,34 +1,22 @@
 ﻿
+document.addEventListener('DOMContentLoaded', (event) => {
+    let approot = document.querySelector('#malformedpeach-github-io');
 
-let foo = 0;
-
-function checkTodo(element) {
-    if(element.checked) {
-        document.querySelector("#foo").classList = "todo-text-crossed";
+    if (window.matchMedia('(prefers-color-scheme: dark').matches) {
+        approot.classList.add('dark');
+        approot.classList.remove('light');
     }
-    else {
-        document.querySelector("#foo").classList = "todo-text";
-    }
-}
 
-function newElement() {
+    //document.querySelector('#theme-toggle').addEventListener('click', function () {
+    //    console.log("Heyho!");
 
-    // Get todo text input
-    let inputText = document.querySelector("#new-todo").value;
-
-    // Get todo template
-    let template = document.querySelector("#todo-template").cloneNode();
-
-    // Set text content on template
-    template.textContent = inputText;
-    template.removeAttribute("hidden");
-
-    // add template to todo list
-    document.querySelector("#todo-list-items").append(template);
-
-        //< !--Template -->
-        //    < !--< li id = "todo-template" hidden >
-        //        <input type="checkbox" />
-        //        <p class="todo-text"></p>
-        //    </li > -->
-}
+    //    if (approot.classList.contains('light')) {
+    //        approot.classList.add('dark');
+    //        approot.classList.remove('light');
+    //    }
+    //    else if (approot.classList.contains('dark')) {
+    //        approot.classList.add('light');
+    //        approot.classList.remove('dark');
+    //    }
+    //});
+});

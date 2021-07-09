@@ -1,14 +1,25 @@
 ﻿@inherits LayoutComponentBase
-@using malformedpeach.github.io.Shared.Components;
+@using malformedpeach.github.io.Shared.Layout;
 
-<div id="main">
+<div id="main" class="@currentTheme">
 
-    <Header />
+    <Header OnClickCallBack="ToggleTheme"/>
 
-    <div id="main-content" class="container">
+    <div id="main-content" role="main">
         @Body
     </div>
 
-    <Footer />
+    <Footer/>
     
 </div>
+
+@code {
+    public string currentTheme { get; set; } = "light";
+
+    public void ToggleTheme()
+    {
+        if (currentTheme == "light") currentTheme = "dark";
+        else if (currentTheme == "dark") currentTheme = "light";
+        this.StateHasChanged();
+    }
+} 

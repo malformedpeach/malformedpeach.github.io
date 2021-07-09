@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace malformedpeach.github.io.Pages
 {
-    public partial class Index
+    public partial class About
     {
+
     }
 }

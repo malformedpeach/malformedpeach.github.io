@@ -1,0 +1,15 @@
+﻿
+<header>
+    <nav>
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="About">About me</NavLink>
+    </nav>
+
+    <button @onclick="OnClickCallBack">Toggle theme</button>
+</header>
+
+@code {
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickCallBack { get; set; }
+}

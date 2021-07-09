@@ -1,0 +1,48 @@
+﻿@use 'variables';
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: variables.$font-family;
+}
+
+h1, p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#main {
+    min-height: 100vh;
+    min-width: 100%;
+    position: absolute;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 1rem;
+    padding-bottom: 100px;
+
+    // Fix responsivity
+    @media screen and (min-width: variables.$breakpoint-small) {
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: variables.$breakpoint-medium) {
+        max-width: variables.$breakpoint-medium;
+    }
+
+    @media screen and (min-width: variables.$breakpoint-large) {
+        max-width: variables.$breakpoint-large;
+    }
+}

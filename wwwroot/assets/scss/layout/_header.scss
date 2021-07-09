@@ -1,0 +1,21 @@
+﻿
+header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid;
+
+    h1 {
+        position: absolute;
+    }
+
+    nav {
+        justify-self: center;
+        margin: auto;
+
+        a {
+            font-size: 20px;
+            padding: 24px;
+        }
+    }
+}

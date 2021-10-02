@@ -49,6 +49,17 @@ a {
   transition: all 0.2s linear;
   background: var(--background1);
   color: var(--text-color);
+  /*
+  &.theme {
+      --background1
+      --background2
+      --background3
+      --accent1
+      --accent2
+      --accent3
+      --text-color
+      --link-color
+  */
 }
 #main header {
   background: var(--background2);
@@ -57,15 +68,23 @@ a {
   color: var(--link-color);
 }
 #main.light {
-  --background1: #d5d5d5;
+  --background1: #dbdbdb;
+  --background2: #adadad;
   --text-color: #000000;
-  --link-color: red;
+  --link-color: #222222;
 }
 #main.dark {
-  --background1: #16161A;
+  --background1: #242424;
   --background2: #111116;
   --text-color: #DDDDE0;
   --link-color: #9a9a9a;
+}
+#main.mountain-lake {
+  --background1: #161821;
+  --background2: #26273a;
+  --background3: #2c395a;
+  --text-color: #ffffff;
+  --link-color: #add5f8;
 }
 
 header {

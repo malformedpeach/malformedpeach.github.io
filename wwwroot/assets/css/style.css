@@ -67,19 +67,14 @@ a {
 #main a {
   color: var(--link-color);
 }
-#main.light {
-  --background1: #dbdbdb;
-  --background2: #adadad;
-  --text-color: #000000;
-  --link-color: #222222;
+#main.mountain-lake-light {
+  --background1: #ffffff;
+  --background2: #add5f8;
+  --background3: #2c395a;
+  --text-color: #161821;
+  --link-color: #26273a;
 }
-#main.dark {
-  --background1: #242424;
-  --background2: #111116;
-  --text-color: #DDDDE0;
-  --link-color: #9a9a9a;
-}
-#main.mountain-lake {
+#main.mountain-lake-dark {
   --background1: #161821;
   --background2: #26273a;
   --background3: #2c395a;
@@ -89,20 +84,55 @@ a {
 
 header {
   display: flex;
+  position: relative;
   align-items: center;
+  justify-content: center;
   height: 70px;
   border-bottom: 1px solid;
+  overflow: hidden;
 }
-header h1 {
-  position: absolute;
-}
-header nav {
-  justify-self: center;
-  margin: auto;
-}
-header nav a {
+header #main-nav a {
   font-size: 20px;
   padding: 24px;
+}
+header #toggle-theme-button {
+  position: relative;
+  top: 3px;
+  left: 10px;
+  border: none;
+  background: none;
+  height: 25px;
+  width: 25px;
+}
+header #toggle-theme-button i {
+  position: absolute;
+  font-size: 24px;
+  right: 0px;
+  top: 0px;
+}
+header #toggle-theme-button i.fa-moon {
+  color: #206094;
+}
+header #toggle-theme-button i.fa-sun {
+  color: #ccc91b;
+}
+
+#main.mountain-lake-light header #toggle-theme-button i.fa-moon {
+  transition: top 0.5s ease-in 0.5s;
+  top: 0px;
+}
+#main.mountain-lake-light header #toggle-theme-button i.fa-sun {
+  transition: top ease-in 0.5s;
+  top: 50px;
+}
+
+#main.mountain-lake-dark header #toggle-theme-button i.fa-moon {
+  transition: top ease-in 0.5s;
+  top: 50px;
+}
+#main.mountain-lake-dark header #toggle-theme-button i.fa-sun {
+  transition: top 0.5s ease-in 0.5s;
+  top: 0px;
 }
 
 footer {
@@ -116,6 +146,20 @@ footer {
 footer .contact-info {
   text-align: center;
   margin: auto;
+}
+
+.project-showcase {
+  border: 1px solid red;
+}
+.project-showcase ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.project-showcase ul img {
+  height: 250px;
+  width: 250px;
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */

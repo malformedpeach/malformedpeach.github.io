@@ -1,0 +1,17 @@
+
+.project-showcase {
+    border: 1px solid red;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+
+
+        img {
+            height: 250px;
+            width: 250px;
+            border: 1px solid red;
+        }
+    }
+}

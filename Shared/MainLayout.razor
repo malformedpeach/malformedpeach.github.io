@@ -1,7 +1,8 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS;
 @using malformedpeach.github.io.Shared.Layout;
 
-<div id="main" class="@currentTheme">
+<div id="main" class="@_currentTheme">
 
     <Header OnClickCallBack="ToggleTheme" />
 
@@ -12,14 +13,3 @@
     <Footer />
 
 </div>
-
-@code {
-    public string currentTheme { get; set; } = "light";
-
-    public void ToggleTheme()
-    {
-        if (currentTheme == "light") currentTheme = "dark";
-        else if (currentTheme == "dark") currentTheme = "light";
-        this.StateHasChanged();
-    }
-} 

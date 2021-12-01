@@ -1,4 +1,7 @@
 ﻿@use 'base';
 @use 'themes';
+// Layouts
 @use 'layout/header';
 @use 'layout/footer';
+// Components
+@use 'components/project-showcase';

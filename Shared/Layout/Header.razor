@@ -1,11 +1,14 @@
 ﻿
 <header>
-    <nav>
+    <nav id="main-nav">
         <NavLink href="/">Home</NavLink>
         <NavLink href="About">About me</NavLink>
     </nav>
 
-    <button @onclick="OnClickCallBack">Toggle theme</button>
+    <button id="toggle-theme-button" alt="toggle light/dark theme" @onclick="OnClickCallBack">
+        <i class="far fa-moon"></i>
+        <i class="far fa-sun"></i>
+    </button>
 </header>
 
 @code {

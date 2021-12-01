@@ -1,22 +1,14 @@
 ﻿
-document.addEventListener('DOMContentLoaded', (event) => {
-    let approot = document.querySelector('#malformedpeach-github-io');
+function getPreferedTheme() {
+
+    let preferedTheme = "";
 
     if (window.matchMedia('(prefers-color-scheme: dark').matches) {
-        approot.classList.add('dark');
-        approot.classList.remove('light');
+        preferedTheme = "dark";
+    }
+    else if (window.matchMedia('(prefers-color-scheme: light').matches) {
+        preferedTheme = "light";
     }
 
-    //document.querySelector('#theme-toggle').addEventListener('click', function () {
-    //    console.log("Heyho!");
-
-    //    if (approot.classList.contains('light')) {
-    //        approot.classList.add('dark');
-    //        approot.classList.remove('light');
-    //    }
-    //    else if (approot.classList.contains('dark')) {
-    //        approot.classList.add('light');
-    //        approot.classList.remove('dark');
-    //    }
-    //});
-});
+    return preferedTheme;
+}

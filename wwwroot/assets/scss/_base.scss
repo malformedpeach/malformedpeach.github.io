@@ -47,7 +47,21 @@ a {
     }
 }
 
-// Prefer light/dark
-// @media (prefers-color-scheme: dark) {
+// appstart
+#loading {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin: auto;
 
-// }
+    p {
+        margin-left: 10px;
+    }
+
+    i {
+        color: #000000;
+    }
+}

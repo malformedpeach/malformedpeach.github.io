@@ -45,6 +45,22 @@ a {
   }
 }
 
+#loading {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin: auto;
+}
+#loading p {
+  margin-left: 10px;
+}
+#loading i {
+  color: #000000;
+}
+
 #main {
   transition: all 0.2s linear;
   background: var(--background1);

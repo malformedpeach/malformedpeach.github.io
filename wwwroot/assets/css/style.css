@@ -7,7 +7,7 @@ body {
   font-family: system-ui, sans-serif;
 }
 
-h1, p {
+h1, h2, h3, p {
   margin: 0;
   line-height: 1.5;
 }
@@ -19,6 +19,7 @@ a {
 #main {
   min-height: 100vh;
   min-width: 100%;
+  max-width: 100%;
   position: absolute;
 }
 
@@ -27,12 +28,10 @@ a {
   flex-direction: column;
   margin: auto;
   margin-top: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 100px;
-}
-@media screen and (min-width: 426px) {
-  #main-content {
-    max-width: 100%;
-  }
+  max-width: 80%;
 }
 @media screen and (min-width: 769px) {
   #main-content {
@@ -65,37 +64,23 @@ a {
   transition: all 0.2s linear;
   background: var(--background1);
   color: var(--text-color);
-  /*
-  &.theme {
-      --background1
-      --background2
-      --background3
-      --accent1
-      --accent2
-      --accent3
-      --text-color
-      --link-color
-  */
-}
-#main header {
-  background: var(--background2);
 }
 #main a {
   color: var(--link-color);
 }
-#main.mountain-lake-light {
-  --background1: #ffffff;
+#main.light {
+  --background1: #e5e5e5;
   --background2: #add5f8;
   --background3: #2c395a;
   --text-color: #161821;
-  --link-color: #26273a;
+  --link-color: #00078d;
 }
-#main.mountain-lake-dark {
+#main.dark {
   --background1: #161821;
-  --background2: #26273a;
+  --background2: #1d1e36;
   --background3: #2c395a;
   --text-color: #ffffff;
-  --link-color: #add5f8;
+  --link-color: #ddd38d;
 }
 
 header {
@@ -104,7 +89,8 @@ header {
   align-items: center;
   justify-content: center;
   height: 70px;
-  border-bottom: 1px solid;
+  background: var(--background2);
+  border-bottom: 1px solid var(--background3);
   overflow: hidden;
 }
 header #main-nav a {
@@ -112,43 +98,53 @@ header #main-nav a {
   padding: 24px;
 }
 header #toggle-theme-button {
+  transition: all ease-in 0.5s;
+  background: linear-gradient(90deg, #950000, #c1a300);
+  border: 2px solid black;
   position: relative;
   top: 3px;
   left: 10px;
-  border: none;
-  background: none;
-  height: 25px;
-  width: 25px;
+  border-radius: 15px;
+  height: 29px;
+  width: 62px;
+  overflow: hidden;
 }
-header #toggle-theme-button i {
+header #toggle-theme-button .background {
+  transition: opacity ease-in 0.5s;
+  background: linear-gradient(90deg, blue, #000272);
   position: absolute;
-  font-size: 24px;
+  top: -5px;
+  right: -5px;
+  border-radius: 12px;
+  width: 150%;
+  height: 150%;
+}
+header #toggle-theme-button .circle {
+  transition: all ease-in 0.4s;
+  position: absolute;
+  font-size: 21px;
   right: 0px;
-  top: 0px;
-}
-header #toggle-theme-button i.fa-moon {
-  color: #206094;
-}
-header #toggle-theme-button i.fa-sun {
-  color: #ccc91b;
+  border: 1px solid black;
+  top: -1px;
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
 }
 
-#main.mountain-lake-light header #toggle-theme-button i.fa-moon {
-  transition: top 0.5s ease-in 0.5s;
-  top: 0px;
+#main.light header #toggle-theme-button .background {
+  opacity: 1;
 }
-#main.mountain-lake-light header #toggle-theme-button i.fa-sun {
-  transition: top ease-in 0.5s;
-  top: 50px;
+#main.light header #toggle-theme-button .circle {
+  background: #acacac;
+  right: 32px;
 }
 
-#main.mountain-lake-dark header #toggle-theme-button i.fa-moon {
-  transition: top ease-in 0.5s;
-  top: 50px;
+#main.dark header #toggle-theme-button .background {
+  opacity: 0;
 }
-#main.mountain-lake-dark header #toggle-theme-button i.fa-sun {
-  transition: top 0.5s ease-in 0.5s;
-  top: 0px;
+#main.dark header #toggle-theme-button .circle {
+  background: gold;
+  right: -1px;
 }
 
 footer {
@@ -165,17 +161,23 @@ footer .contact-info {
 }
 
 .project-showcase {
-  border: 1px solid red;
+  padding: 20px 0px 20px 0px;
 }
 .project-showcase ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0;
 }
-.project-showcase ul img {
-  height: 250px;
-  width: 250px;
-  border: 1px solid red;
+.project-showcase ul li {
+  border: 1px solid var(--link-color);
+  border-radius: 20px;
+  background: var(--background2);
+  padding: 20px;
+  margin: 20px 0px 20px 0px;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */

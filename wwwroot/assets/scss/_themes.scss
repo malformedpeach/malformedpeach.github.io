@@ -5,61 +5,23 @@
     background: var(--background1);
     color: var(--text-color);
 
-    header {
-        background: var(--background2);
-    }
-
     a {
         color: var(--link-color);
     }
 
-    // Color themes
-
-    /*
-    &.theme {
-        --background1
-        --background2
-        --background3
-        --accent1
-        --accent2
-        --accent3
-        --text-color
-        --link-color
-    */
-
-
-    // &.light {
-    //     --background1: #dbdbdb;
-    //     --background2: #adadad;
-    //     //--background3:
-    //     --text-color: #000000;
-    //     --link-color: #222222;
-    // }
-
-    // &.dark {
-    //     --background1: #242424; 
-    //     --background2: #111116;
-    //     //--background3:
-    //     --text-color: #DDDDE0;
-    //     --link-color: #9a9a9a;
-    // }
-
-    // Color theme from 'mountain-lake-palette'. You put it somewhere in the pics folder.
-    // Try it out. It could look cool. 
-    // Sincerely, younger you.
-    &.mountain-lake-light {
-        --background1: #ffffff;
+    &.light {
+        --background1: #e5e5e5;
         --background2: #add5f8;
         --background3: #2c395a;
         --text-color:  #161821;
-        --link-color:  #26273a;
+        --link-color:  #00078d;
     }
 
-    &.mountain-lake-dark {
+    &.dark {
         --background1: #161821;
-        --background2: #26273a;
+        --background2: #1d1e36;
         --background3: #2c395a;
         --text-color:  #ffffff;
-        --link-color:  #add5f8;
+        --link-color:  #ddd38d;
     }
 }

@@ -1,17 +1,22 @@
 
 .project-showcase {
-    border: 1px solid red;
+    padding: 20px 0px 20px 0px;
 
     ul {
         list-style: none;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0;
 
-
-        img {
-            height: 250px;
-            width: 250px;
-            border: 1px solid red;
+        li {
+            border: 1px solid var(--link-color);
+            border-radius: 20px;
+            background: var(--background2);
+            padding: 20px;
+            margin: 20px 0px 20px 0px;
+            flex-wrap: wrap;
         }
     }
 }

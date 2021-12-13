@@ -9,12 +9,12 @@ namespace malformedpeach.github.io.Shared
 {
     public partial class MainLayout
     {
-        private string _currentTheme = "mountain-lake-light";
+        private string _currentTheme = "light";
 
         private void ToggleTheme()
         {
-            if (_currentTheme == "mountain-lake-light") _currentTheme = "mountain-lake-dark";
-            else if (_currentTheme == "mountain-lake-dark") _currentTheme = "mountain-lake-light";
+            if (_currentTheme == "light") _currentTheme = "dark";
+            else if (_currentTheme == "dark") _currentTheme = "light";
             this.StateHasChanged();
         }
 
@@ -22,7 +22,7 @@ namespace malformedpeach.github.io.Shared
         protected override async Task OnInitializedAsync()
         {
             var interopResult = await JS.InvokeAsync<string>("getPreferedTheme");
-            _currentTheme = $"mountain-lake-{interopResult}";
+            _currentTheme = $"{interopResult}";
         }
     }
 }

@@ -1,0 +1,88 @@
+﻿
+header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background: var(--background2);
+    border-bottom: 1px solid var(--background3);
+    overflow: hidden;
+
+    #main-nav {
+
+        a {
+            font-size: 20px;
+            padding: 24px;
+        }
+    }
+
+    #toggle-theme-button {
+        transition: all ease-in 0.5s;
+        background: linear-gradient(90deg, #950000, #c1a300);
+        border: 2px solid black;
+        position: relative;
+        top: 3px;
+        left: 10px;
+        border-radius: 15px;
+        height: 29px;
+        width: 62px;
+        overflow: hidden;
+
+        .background {
+            transition: opacity ease-in .5s;
+            background: linear-gradient(90deg, blue, #000272);
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            border-radius: 12px;
+            width: 150%;
+            height: 150%;
+        }
+
+        .circle {
+            transition: all ease-in 0.4s;
+            position: absolute;
+            font-size: 21px;
+            right: 0px;
+            border: 1px solid black;
+            top: -1px;
+            height: 27px;
+            width: 27px;
+            border-radius: 50%;
+        }
+    }
+}
+
+// Toggle theme icon transition
+#main.light {
+    header {
+        #toggle-theme-button {
+            .background {
+                opacity: 1;
+            }
+
+            .circle {
+                background: #acacac;
+                //transform: rotate(0deg);
+                right: 32px;
+            }
+        }
+    }
+}
+
+#main.dark {
+    header {
+        #toggle-theme-button {
+            .background {
+                opacity: 0;
+            }
+
+            .circle {
+                background: gold;
+                //transform: rotate(180deg);
+                right: -1px;
+            }
+        }
+    }
+}

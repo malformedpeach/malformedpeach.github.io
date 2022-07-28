@@ -1,15 +1,15 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS;
+@using malformedpeach.github.io.Shared.Layout;
 
-<div class="sidebar">
-    <NavMenu />
-</div>
+<div id="main" class="@_currentTheme">
 
-<div class="main">
-    <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-    </div>
+    <Header OnClickCallBack="ToggleTheme" />
 
-    <div class="content px-4">
+    <div id="main-content" role="main">
         @Body
     </div>
+
+    <Footer />
+
 </div>

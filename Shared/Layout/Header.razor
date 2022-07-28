@@ -1,0 +1,18 @@
+﻿
+<header>
+    <nav id="main-nav">
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="About">About me</NavLink>
+    </nav>
+
+    <button id="toggle-theme-button" alt="toggle light/dark theme" @onclick="OnClickCallBack">
+        <i class="background"></i>
+        <i class="circle"></i>
+    </button>
+</header>
+
+@code {
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickCallBack { get; set; }
+}

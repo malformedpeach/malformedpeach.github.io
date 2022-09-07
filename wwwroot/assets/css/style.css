@@ -62,7 +62,7 @@ a {
 
 #main {
   transition: all 0.2s linear;
-  background: var(--background1);
+  background: linear-gradient(var(--background1), var(--gradient));
   color: var(--text-color);
 }
 #main a {
@@ -70,6 +70,7 @@ a {
 }
 #main.light {
   --background1: #e5e5e5;
+  --gradient: white;
   --background2: #add5f8;
   --background3: #2c395a;
   --text-color: #161821;
@@ -77,6 +78,7 @@ a {
 }
 #main.dark {
   --background1: #161821;
+  --gradient: black;
   --background2: #1d1e36;
   --background3: #2c395a;
   --text-color: #ffffff;
@@ -160,6 +162,19 @@ footer .contact-info {
   margin: auto;
 }
 
+#profile-picture {
+  border: 1rem black;
+  border-radius: 50%;
+  width: 20rem;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0px 1rem 0px;
+}
+
 .project-showcase {
   padding: 20px 0px 20px 0px;
 }
@@ -170,6 +185,7 @@ footer .contact-info {
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 0;
+  width: 100%;
 }
 .project-showcase ul li {
   border: 1px solid var(--link-color);
@@ -178,6 +194,8 @@ footer .contact-info {
   padding: 20px;
   margin: 20px 0px 20px 0px;
   flex-wrap: wrap;
+  min-width: 20rem;
+  max-width: 20rem;
 }
 
 /*# sourceMappingURL=style.css.map */

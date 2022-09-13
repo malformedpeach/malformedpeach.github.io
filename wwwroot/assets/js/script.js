@@ -12,3 +12,7 @@ function getPreferedTheme() {
 
     return preferedTheme;
 }
+
+window.addEventListener('scroll', function () {
+    // Scroll detection function, hide header on scroll down, show header on scroll up.
+});

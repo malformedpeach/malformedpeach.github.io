@@ -1,9 +1,10 @@
 ﻿
 <div class="block">
-    <h2>@Title</h2>
-    <button onclick="toggleExpand(this)">Toggle Expand</button>
-
-    <div class="expandable-block">
+    <div class="expandable-header">
+        <h2>@Title</h2>
+        <button onclick="toggleExpand(this)"></button>
+    </div>
+    <div class="expandable-content">
         @ChildContent
     </div>
 </div>

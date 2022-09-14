@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -190,7 +191,6 @@ footer .contact-info {
   border-radius: 20px;
   background: var(--background2);
   padding: 20px;
-  margin: 20px 0px 20px 0px;
   flex-wrap: wrap;
   position: relative;
   transition: filter 0.2s linear;
@@ -198,7 +198,7 @@ footer .contact-info {
   max-width: 17rem;
 }
 .card .blocklink {
-  border-radius: 20px;
+  border-radius: 2rem;
   width: 100%;
   height: 100%;
   left: 0;
@@ -208,15 +208,44 @@ footer .contact-info {
 .card h3 {
   color: var(--link-color);
 }
-.card:hover {
+.card-clickable:hover {
   filter: brightness(125%) contrast(90%);
 }
 
-.expandable-block {
+.expandable-header {
+  display: flex;
+  flex-direction: row;
+}
+.expandable-header button {
+  position: relative;
+  left: 10px;
+  top: 2px;
+  transform: rotate(90deg) scaleX(1);
+  font-size: 30px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+.expandable-header button::after {
+  content: "»";
+  color: var(--text-color);
+  transition: color 0.2s linear;
+}
+.expandable-header button:hover::after {
+  color: var(--link-color);
+}
+.expandable-header button.expanded {
+  transform: rotate(90deg) scaleX(-1);
+}
+
+.expandable-content {
   overflow: hidden;
   height: auto;
   max-height: 0px;
   transition: max-height 0.2s linear;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

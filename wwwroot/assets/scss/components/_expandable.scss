@@ -1,6 +1,41 @@
-.expandable-block {
+.expandable-header {
+    display: flex;
+    flex-direction: row;
+
+    button {
+        position: relative;
+        left: 10px;
+        top: 2px;
+        transform: rotate(90deg) scaleX(1);
+        font-size: 30px;
+        border-radius: 50%;
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: transform .2s linear;
+
+        &::after {
+            content: '\000BB';
+            color: var(--text-color);
+            transition: color .2s linear;
+        }
+
+        &:hover {
+            &::after {
+                color: var(--link-color);
+            }
+        }
+
+        &.expanded {
+            transform: rotate(90deg) scaleX(-1);
+        }
+    }
+}
+
+.expandable-content {
     overflow: hidden;
     height: auto;
     max-height: 0px;
     transition: max-height .2s linear;
+    width: 100%;
 }

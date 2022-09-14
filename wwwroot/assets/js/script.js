@@ -14,12 +14,18 @@ function getPreferedTheme() {
 }
 
 function toggleExpand(button) {
-    let expandable = button.nextElementSibling;
+    let expandable = button.parentElement.nextElementSibling;
 
     if(expandable.style.maxHeight)
+    {
         expandable.style.maxHeight = null;
-    else 
+        button.classList.remove("expanded");
+    }
+    else
+    {
         expandable.style.maxHeight = expandable.scrollHeight + "px";
+        button.classList.add("expanded");
+    } 
 }
 
 

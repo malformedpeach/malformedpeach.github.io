@@ -194,8 +194,7 @@ footer .contact-info {
   flex-wrap: wrap;
   position: relative;
   transition: filter 0.2s linear;
-  min-width: 17rem;
-  max-width: 17rem;
+  max-width: 40rem;
 }
 .card .blocklink {
   border-radius: 2rem;

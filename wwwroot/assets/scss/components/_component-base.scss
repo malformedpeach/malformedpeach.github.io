@@ -10,3 +10,45 @@
     align-items: center;
     margin: 1rem 0px 1rem 0px;
 }
+
+.card-container {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid var(--link-color);
+    border-radius: 20px;
+    background: var(--background2);
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+    flex-wrap: wrap;
+    position: relative;
+    transition: filter .2s linear;
+
+    // Maybe not
+    min-width: 17rem;
+    max-width: 17rem;
+
+    .blocklink {
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    h3 {
+        color: var(--link-color);
+    }
+
+    &:hover {
+        filter: brightness(125%) contrast(90%);
+    }
+}

@@ -1,0 +1,17 @@
+﻿
+<div class="block">
+    <h2>@Title</h2>
+    <button onclick="toggleExpand(this)">Toggle Expand</button>
+
+    <div class="expandable-block">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+}

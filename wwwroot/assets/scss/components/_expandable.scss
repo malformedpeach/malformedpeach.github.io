@@ -1,0 +1,6 @@
+.expandable-block {
+    overflow: hidden;
+    height: auto;
+    max-height: 0px;
+    transition: max-height .2s linear;
+}

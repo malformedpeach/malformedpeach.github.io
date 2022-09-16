@@ -18,6 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="wwwroot\assets\img\DSC_0060.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\assets\img\DSC_00602.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\assets\img\user-profile-placeholder.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

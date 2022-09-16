@@ -75,7 +75,7 @@ a {
   --background2: #95bbdd;
   --background3: #2c395a;
   --text-color: #161821;
-  --link-color: #00078d;
+  --link-color: #383c95;
 }
 #main.dark {
   --background1: #161821;
@@ -83,7 +83,7 @@ a {
   --background2: #1d1e36;
   --background3: #2c395a;
   --text-color: #ffffff;
-  --link-color: #ddd38d;
+  --link-color: #dbcf6e;
 }
 
 header {
@@ -222,7 +222,11 @@ footer .contact-info {
   margin: auto;
 }
 
-#profile-picture {
+.profile {
+  text-align: center;
+}
+
+.profile-picture {
   border-radius: 50%;
   max-width: 20rem;
   margin: 5px 0px 10px 0px;

@@ -2,26 +2,29 @@
 
 #main {
     transition: all .2s linear;
-    background: var(--background1);
+    background: linear-gradient(var(--background1), var(--gradient));
     color: var(--text-color);
 
     a {
         color: var(--link-color);
     }
 
+    // TODO: Touch up on light theme
     &.light {
         --background1: #e5e5e5;
-        --background2: #add5f8;
+        --gradient: rgb(250, 250, 250);
+        --background2: #95bbdd;//#7fa7ca;//#add5f8;
         --background3: #2c395a;
         --text-color:  #161821;
-        --link-color:  #00078d;
+        --link-color:  #383c95;
     }
 
     &.dark {
         --background1: #161821;
+        --gradient: black;
         --background2: #1d1e36;
         --background3: #2c395a;
         --text-color:  #ffffff;
-        --link-color:  #ddd38d;
+        --link-color:  #dbcf6e;
     }
 }

@@ -12,3 +12,23 @@ function getPreferedTheme() {
 
     return preferedTheme;
 }
+
+function toggleExpand(button) {
+    let expandable = button.parentElement.nextElementSibling;
+
+    if(expandable.style.maxHeight)
+    {
+        expandable.style.maxHeight = null;
+        button.classList.remove("expanded");
+    }
+    else
+    {
+        expandable.style.maxHeight = expandable.scrollHeight + "px";
+        button.classList.add("expanded");
+    } 
+}
+
+
+// window.addEventListener('scroll', function () {
+//     // Scroll detection function, hide header on scroll down, show header on scroll up.
+// });
